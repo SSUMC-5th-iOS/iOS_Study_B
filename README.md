@@ -1,7 +1,7 @@
 # 🍎 iOS_Study_B
 SSUMC 5기 iOS 스터디 B조
 
-![image](https://github.com/iiuoon/SSUMC_iOS/assets/84546438/d426ad45-f232-4e94-9a72-72d3acee9995)
+![umc+logo](https://github.com/SSUMC-5th-iOS/iOS_Study_B/assets/84546438/f45dbfa9-8783-42d9-b3b2-3323e6a442aa)
 
 ## 💻 Member
 | 김보미 | 임아영 | 정민지 | 황채웅 |
