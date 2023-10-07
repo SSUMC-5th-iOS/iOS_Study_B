@@ -18,10 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_catstagram_logo" translatesAutoresizingMaskIntoConstraints="NO" id="UuW-Sd-Idb">
-                                <rect key="frame" x="71.666666666666686" y="270" width="250" height="75"/>
+                                <rect key="frame" x="71.666666666666686" y="249" width="250" height="96"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="uUx-jh-5ww"/>
-                                    <constraint firstAttribute="width" constant="250" id="wyv-XW-Glv"/>
+                                    <constraint firstAttribute="width" constant="250" id="Rpd-wz-jcs"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LU9-SZ-XyQ">
@@ -117,7 +116,6 @@
                             <constraint firstItem="6im-U8-YYf" firstAttribute="top" secondItem="LU9-SZ-XyQ" secondAttribute="bottom" constant="10" id="sky-mg-LL8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6im-U8-YYf" secondAttribute="trailing" constant="10" id="t56-2z-z1e"/>
                             <constraint firstItem="oST-Zj-2wg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tJJ-yn-QYS"/>
-                            <constraint firstItem="UuW-Sd-Idb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="125:426" id="w50-QN-ohR"/>
                         </constraints>
                     </view>
                 </viewController>
