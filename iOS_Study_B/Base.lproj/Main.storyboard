@@ -81,6 +81,14 @@
                                     <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXd-cE-9Zb">
+                                <rect key="frame" x="96" y="605" width="201" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="L7z-83-hDq"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="f.square.fill" catalog="system" title="Facebook으로 로그인"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -106,8 +114,10 @@
                             <constraint firstItem="LU9-SZ-XyQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gQR-Bi-4HN"/>
                             <constraint firstItem="CtF-w2-jPO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="ggE-7w-UuM"/>
                             <constraint firstItem="V4P-N7-Yv5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="iBf-Za-EDJ"/>
+                            <constraint firstItem="UXd-cE-9Zb" firstAttribute="top" secondItem="IU6-Yq-NsZ" secondAttribute="bottom" constant="15" id="iIC-jP-x6u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YxC-mS-Tl0" secondAttribute="trailing" constant="10" id="iqi-bH-a1d"/>
                             <constraint firstItem="8zo-wN-QcP" firstAttribute="top" secondItem="UuW-Sd-Idb" secondAttribute="bottom" constant="20" id="poq-Sx-aLO"/>
+                            <constraint firstItem="UXd-cE-9Zb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rhb-di-cBW"/>
                             <constraint firstItem="IU6-Yq-NsZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sRc-f5-pf0"/>
                             <constraint firstItem="8zo-wN-QcP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="sg7-i3-LVe"/>
                             <constraint firstItem="6im-U8-YYf" firstAttribute="top" secondItem="LU9-SZ-XyQ" secondAttribute="bottom" constant="10" id="sky-mg-LL8"/>
@@ -122,6 +132,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="f.square.fill" catalog="system" width="128" height="114"/>
         <image name="ic_catstagram_logo" width="476" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
