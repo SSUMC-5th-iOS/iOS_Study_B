@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
         {
             print("로그인 완료")
             let vc = storyboard?.instantiateViewController(identifier: "TabBarVC") as! UITabBarController
-            //vc.modalTransitionStyle = .fullScreen
+            vc.modalPresentationStyle = .fullScreen
             self.present(vc,animated: true, completion: nil)
         } else {
             print("로그인 실패")
