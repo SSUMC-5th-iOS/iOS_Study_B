@@ -7,23 +7,25 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, ChangeLabelDelegate {
+
+    var previousViewController: ViewController?
+
+    @IBOutlet weak var textField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        previousViewController?.delegate = self
     }
-    
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func buttonDismiss(_ sender: Any) {
+        dismiss(animated: true)
+        doChange()
     }
-    */
 
+    func doChange() {
+        previousViewController?.label.text = textField.text
+    }
 }
