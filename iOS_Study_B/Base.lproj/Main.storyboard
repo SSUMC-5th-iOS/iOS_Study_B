@@ -147,6 +147,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l78-kc-60z"/>
+                    <connections>
+                        <outlet property="registerButton" destination="oST-Zj-2wg" id="jbz-nM-UUs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -309,6 +312,7 @@
                         <outlet property="nameTextField" destination="PPt-L5-1y3" id="F6b-iu-rgc"/>
                         <outlet property="nicknameTextField" destination="e0B-sM-w3K" id="zcJ-Na-TXY"/>
                         <outlet property="passwordTextField" destination="yxv-Mq-GYT" id="3az-p5-25m"/>
+                        <outlet property="popToLoginButton" destination="f19-8i-0Yd" id="itm-oR-bK7"/>
                         <outlet property="signupButton" destination="fQf-vg-EsD" id="mcw-hb-1td"/>
                     </connections>
                 </viewController>
@@ -339,7 +343,7 @@
         <image name="f.square.fill" catalog="system" width="128" height="114"/>
         <image name="ic_catstagram_logo" width="476" height="96"/>
         <namedColor name="disabledButtonColor">
-            <color red="0.77600000000000002" green="0.872" blue="0.97999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77600002288818359" green="0.87199997901916504" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="facebookColor">
             <color red="0.25490196078431371" green="0.57647058823529407" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
