@@ -39,12 +39,11 @@ extension ViewController: UITableViewDataSource {
         let target = testData[indexPath.row]
 
         cell.title.text = target.title
-        cell.imageView?.image = UIImage(named: target.image)
+        cell.productImage?.image = UIImage(named: target.image)
         cell.subtitle.text = "\(target.location) · \(target.updateDate)"
 
-        cell.imageView?.layer.cornerRadius = 10
-        cell.imageView?.clipsToBounds = true
-        cell.imageView?.backgroundColor = .red
+        cell.productImage?.layer.cornerRadius = 10
+        cell.productImage?.clipsToBounds = true
 
         return cell
     }
