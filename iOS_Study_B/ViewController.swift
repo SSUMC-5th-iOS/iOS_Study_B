@@ -9,11 +9,44 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let testData = Test.data
+    let cellName = "TestListCell"
+    let cellReuseIdentifier = "testCell"
+
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        tableView.delegate = self
+        tableView.dataSource = self
     }
-
-
 }
 
+extension ViewController: UITableViewDelegate { }
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        testData.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as?
+                CustomTableViewCell else {
+            return UITableViewCell()
+        }
+
+        let target = testData[indexPath.row]
+
+        cell.title.text = target.title
+        cell.imageView?.image = UIImage(named: target.image)
+        cell.subtitle.text = "\(target.location) · \(target.updateDate)"
+
+        cell.imageView?.layer.cornerRadius = 10
+        cell.imageView?.clipsToBounds = true
+        cell.imageView?.backgroundColor = .red
+
+        return cell
+    }
+
+}
