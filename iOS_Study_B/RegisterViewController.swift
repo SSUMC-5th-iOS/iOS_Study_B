@@ -51,6 +51,9 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         setupTextField()
         setupAttribute()
+        
+        //bug fix
+        self.navigationController?.interactivePopGestureRecognizer?.delegate=nil
     }
     //Mark: -Action
     
@@ -73,6 +76,11 @@ class RegisterViewController: UIViewController {
         }
         
     }
+    @IBAction func backButtonDidTap(_ sender: UIBarButtonItem) {
+        //뒤로가기
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     //Mark: -Helpers
     private func setupTextField(){
         textFields.forEach{tf in

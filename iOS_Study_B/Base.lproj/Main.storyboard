@@ -306,6 +306,14 @@
                             <constraint firstItem="fle-7p-SSu" firstAttribute="top" secondItem="V5w-aF-Fr1" secondAttribute="bottom" constant="35" id="zip-Mq-e1z"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9rY-Oh-NLI">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.backward" catalog="system" id="PMh-yy-bwA">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backButtonDidTap:" destination="v0G-JW-o5S" id="8dK-iw-Mu7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="emailTextField" destination="kSJ-Hh-Io7" id="2sp-Sr-1GP"/>
@@ -340,6 +348,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="f.square.fill" catalog="system" width="128" height="114"/>
         <image name="ic_catstagram_logo" width="476" height="96"/>
         <namedColor name="disabledButtonColor">
