@@ -32,22 +32,15 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptN-iN-wzv">
-                                <rect key="frame" x="311" y="61" width="22" height="34"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system">
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5l-ad-I4d">
-                                <rect key="frame" x="352" y="63" width="25" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5l-ad-I4d">
+                                <rect key="frame" x="328" y="63" width="49" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="bell" catalog="system">
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ten-ON-1Za">
-                                <rect key="frame" x="250" y="63" width="51" height="34.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ten-ON-1Za">
+                                <rect key="frame" x="227.33333333333334" y="63" width="51.000000000000028" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal" catalog="system">
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
@@ -111,21 +104,28 @@
                                     <tabBarItem systemItem="more" id="7zp-u9-F3v"/>
                                 </items>
                             </tabBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptN-iN-wzv">
+                                <rect key="frame" x="279" y="63" width="49.666666666666686" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TWH-av-3M9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8fV-k6-67d"/>
-                            <constraint firstItem="d5l-ad-I4d" firstAttribute="leading" secondItem="ptN-iN-wzv" secondAttribute="trailing" constant="20" id="AcQ-kC-xlm"/>
                             <constraint firstItem="160-Dg-THo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="J4q-oI-Teh"/>
                             <constraint firstItem="160-Dg-THo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PaI-23-qyM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d5l-ad-I4d" secondAttribute="trailing" constant="16" id="T6j-Nh-GVK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hwS-nN-EkK" secondAttribute="bottom" id="U8T-kq-9FV"/>
-                            <constraint firstItem="ptN-iN-wzv" firstAttribute="leading" secondItem="Ten-ON-1Za" secondAttribute="trailing" constant="-20" id="Z1B-rK-kBM"/>
                             <constraint firstItem="Ten-ON-1Za" firstAttribute="centerY" secondItem="TWH-av-3M9" secondAttribute="centerY" id="aez-us-ajU"/>
+                            <constraint firstItem="ptN-iN-wzv" firstAttribute="leading" secondItem="Ten-ON-1Za" secondAttribute="trailing" constant="0.66666666666662877" id="caP-6b-2MZ"/>
                             <constraint firstAttribute="bottom" secondItem="160-Dg-THo" secondAttribute="bottom" id="clg-nR-4aG"/>
                             <constraint firstItem="d5l-ad-I4d" firstAttribute="centerY" secondItem="TWH-av-3M9" secondAttribute="centerY" id="cyP-yA-45M"/>
                             <constraint firstItem="OYY-0b-yFo" firstAttribute="leading" secondItem="TWH-av-3M9" secondAttribute="trailing" constant="-7" id="dPi-Nm-BYa"/>
+                            <constraint firstItem="d5l-ad-I4d" firstAttribute="leading" secondItem="ptN-iN-wzv" secondAttribute="trailing" constant="-0.66666666666668561" id="dpV-jM-YLd"/>
                             <constraint firstItem="hwS-nN-EkK" firstAttribute="top" secondItem="OYY-0b-yFo" secondAttribute="bottom" constant="7" id="gBg-YF-HRC"/>
                             <constraint firstItem="ptN-iN-wzv" firstAttribute="centerY" secondItem="TWH-av-3M9" secondAttribute="centerY" id="mVC-hB-WB1"/>
                             <constraint firstItem="OYY-0b-yFo" firstAttribute="centerY" secondItem="TWH-av-3M9" secondAttribute="centerY" id="mpk-cE-IhB"/>
