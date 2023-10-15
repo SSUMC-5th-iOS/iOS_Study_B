@@ -68,7 +68,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsD-dQ-AQF">
-                        <rect key="frame" x="339" y="111" width="17" height="15"/>
+                        <rect key="frame" x="339" y="112" width="17" height="15"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="17" id="8AZ-Qg-FrN"/>
                             <constraint firstAttribute="height" constant="15" id="GBc-Kg-jn0"/>
@@ -90,7 +90,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrY-32-ED5">
-                        <rect key="frame" x="303.33333333333331" y="111" width="17" height="15"/>
+                        <rect key="frame" x="303.33333333333331" y="112" width="17" height="15"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="17" id="VTv-pW-XMf"/>
                             <constraint firstAttribute="height" constant="15" id="vEw-7c-8bX"/>
@@ -104,24 +104,24 @@
                     </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="5Ki-ZM-qeV" secondAttribute="bottom" constant="15" id="1zQ-lU-fWF"/>
+                    <constraint firstAttribute="bottom" secondItem="ZrY-32-ED5" secondAttribute="bottom" constant="15" id="4IL-Ai-aGe"/>
                     <constraint firstItem="PgQ-nS-xgC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Ckb-c8-bps"/>
                     <constraint firstItem="Jdu-yh-4J4" firstAttribute="top" secondItem="PgQ-nS-xgC" secondAttribute="bottom" constant="5" id="LKq-HD-kQ6"/>
                     <constraint firstItem="QsD-dQ-AQF" firstAttribute="leading" secondItem="5Ki-ZM-qeV" secondAttribute="trailing" constant="5" id="MQP-hv-MV4"/>
                     <constraint firstAttribute="bottom" secondItem="kxY-P0-gQU" secondAttribute="bottom" constant="15" id="OYM-fO-eol"/>
+                    <constraint firstAttribute="bottom" secondItem="QsD-dQ-AQF" secondAttribute="bottom" constant="15" id="SPH-lz-rld"/>
                     <constraint firstItem="3yV-eP-LpE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="Txp-k1-oui"/>
                     <constraint firstItem="bPc-K9-SgK" firstAttribute="leading" secondItem="PgQ-nS-xgC" secondAttribute="leading" id="UJV-Jb-MPe"/>
                     <constraint firstItem="ujo-xy-ChD" firstAttribute="leading" secondItem="3yV-eP-LpE" secondAttribute="trailing" constant="50" id="UmN-JF-Av3"/>
-                    <constraint firstItem="QsD-dQ-AQF" firstAttribute="centerY" secondItem="kxY-P0-gQU" secondAttribute="centerY" id="Wad-P3-NrE"/>
                     <constraint firstItem="ujo-xy-ChD" firstAttribute="top" secondItem="Jdu-yh-4J4" secondAttribute="bottom" constant="3" id="dUq-j4-eTx"/>
                     <constraint firstItem="3yV-eP-LpE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="fQK-nr-nxE"/>
                     <constraint firstItem="kxY-P0-gQU" firstAttribute="leading" secondItem="QsD-dQ-AQF" secondAttribute="trailing" constant="5" id="fkk-rP-UaM"/>
                     <constraint firstItem="bPc-K9-SgK" firstAttribute="top" secondItem="Jdu-yh-4J4" secondAttribute="bottom" constant="5" id="g0d-LD-M7b"/>
-                    <constraint firstItem="ZrY-32-ED5" firstAttribute="centerY" secondItem="kxY-P0-gQU" secondAttribute="centerY" id="ggt-Nq-YkD"/>
                     <constraint firstAttribute="bottom" secondItem="3yV-eP-LpE" secondAttribute="bottom" constant="15" id="ifS-np-JRI"/>
                     <constraint firstItem="Jdu-yh-4J4" firstAttribute="leading" secondItem="PgQ-nS-xgC" secondAttribute="leading" id="mry-k0-Fbj"/>
                     <constraint firstItem="PgQ-nS-xgC" firstAttribute="leading" secondItem="3yV-eP-LpE" secondAttribute="trailing" constant="13" id="n6C-zT-Qo1"/>
                     <constraint firstItem="5Ki-ZM-qeV" firstAttribute="leading" secondItem="ZrY-32-ED5" secondAttribute="trailing" constant="5" id="oq3-cf-sdb"/>
-                    <constraint firstItem="5Ki-ZM-qeV" firstAttribute="centerY" secondItem="QsD-dQ-AQF" secondAttribute="centerY" id="pcX-ZR-UTQ"/>
                     <constraint firstAttribute="trailing" secondItem="kxY-P0-gQU" secondAttribute="trailing" constant="15" id="qBw-b0-4dX"/>
                 </constraints>
             </tableViewCellContentView>

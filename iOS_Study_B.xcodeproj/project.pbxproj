@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D3282532ADAF4E700F8E29E /* recomandProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3282512ADAF4E700F8E29E /* recomandProductTableViewCell.swift */; };
+		2D3282542ADAF4E700F8E29E /* recomandProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3282522ADAF4E700F8E29E /* recomandProductTableViewCell.xib */; };
+		2D3282592ADAF76A00F8E29E /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3282572ADAF76A00F8E29E /* CollectionTableViewCell.swift */; };
+		2D32825A2ADAF76A00F8E29E /* CollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3282582ADAF76A00F8E29E /* CollectionTableViewCell.xib */; };
+		2D32825C2ADAF95E00F8E29E /* IMG_2963 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D32825B2ADAF95E00F8E29E /* IMG_2963 2.jpg */; };
+		2D32825F2ADC1FAC00F8E29E /* RecomandCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32825D2ADC1FAC00F8E29E /* RecomandCollectionViewCell.swift */; };
+		2D3282602ADC1FAC00F8E29E /* RecomandCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D32825E2ADC1FAC00F8E29E /* RecomandCollectionViewCell.xib */; };
 		2D51EC742ACF257A0059FC70 /* LifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51EC732ACF257A0059FC70 /* LifeViewController.swift */; };
 		2D51EC762ACF25A30059FC70 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51EC752ACF25A30059FC70 /* LocationViewController.swift */; };
 		2D51EC782ACF25B10059FC70 /* ChatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51EC772ACF25B10059FC70 /* ChatingViewController.swift */; };
@@ -22,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D3282512ADAF4E700F8E29E /* recomandProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recomandProductTableViewCell.swift; sourceTree = "<group>"; };
+		2D3282522ADAF4E700F8E29E /* recomandProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = recomandProductTableViewCell.xib; sourceTree = "<group>"; };
+		2D3282572ADAF76A00F8E29E /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		2D3282582ADAF76A00F8E29E /* CollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionTableViewCell.xib; sourceTree = "<group>"; };
+		2D32825B2ADAF95E00F8E29E /* IMG_2963 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "IMG_2963 2.jpg"; sourceTree = "<group>"; };
+		2D32825D2ADC1FAC00F8E29E /* RecomandCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomandCollectionViewCell.swift; sourceTree = "<group>"; };
+		2D32825E2ADC1FAC00F8E29E /* RecomandCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecomandCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D51EC732ACF257A0059FC70 /* LifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeViewController.swift; sourceTree = "<group>"; };
 		2D51EC752ACF25A30059FC70 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		2D51EC772ACF25B10059FC70 /* ChatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatingViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +63,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D3282562ADAF73E00F8E29E /* collectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				2D3282572ADAF76A00F8E29E /* CollectionTableViewCell.swift */,
+				2D3282582ADAF76A00F8E29E /* CollectionTableViewCell.xib */,
+				2D32825D2ADC1FAC00F8E29E /* RecomandCollectionViewCell.swift */,
+				2D32825E2ADC1FAC00F8E29E /* RecomandCollectionViewCell.xib */,
+			);
+			path = collectionCell;
+			sourceTree = "<group>";
+		};
 		2DE6B5262AD70EA1001CF60B /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,8 +86,11 @@
 		2DE6B5272AD70EB5001CF60B /* homeTable */ = {
 			isa = PBXGroup;
 			children = (
+				2D3282512ADAF4E700F8E29E /* recomandProductTableViewCell.swift */,
+				2D3282522ADAF4E700F8E29E /* recomandProductTableViewCell.xib */,
 				2DE6B5282AD70EDB001CF60B /* ProductTableViewCell.swift */,
 				2DE6B5292AD70EDB001CF60B /* ProductTableViewCell.xib */,
+				2D3282562ADAF73E00F8E29E /* collectionCell */,
 			);
 			path = homeTable;
 			sourceTree = "<group>";
@@ -97,6 +125,7 @@
 				954B6B892AC57DAB00FDCFAB /* Assets.xcassets */,
 				954B6B8E2AC57DAB00FDCFAB /* Info.plist */,
 				2DFBB35A2AD6E6BA005143A4 /* IMG_2962.jpg */,
+				2D32825B2ADAF95E00F8E29E /* IMG_2963 2.jpg */,
 			);
 			path = iOS_Study_B;
 			sourceTree = "<group>";
@@ -160,9 +189,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				954B6B8A2AC57DAB00FDCFAB /* Assets.xcassets in Resources */,
+				2D32825A2ADAF76A00F8E29E /* CollectionTableViewCell.xib in Resources */,
+				2D32825C2ADAF95E00F8E29E /* IMG_2963 2.jpg in Resources */,
 				2DE6B52B2AD70EDB001CF60B /* ProductTableViewCell.xib in Resources */,
 				2DFBB35B2AD6E6BB005143A4 /* IMG_2962.jpg in Resources */,
 				954B6B882AC57DAA00FDCFAB /* Main.storyboard in Resources */,
+				2D3282542ADAF4E700F8E29E /* recomandProductTableViewCell.xib in Resources */,
+				2D3282602ADC1FAC00F8E29E /* RecomandCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,8 +208,11 @@
 			files = (
 				2D51EC762ACF25A30059FC70 /* LocationViewController.swift in Sources */,
 				2DE6B52A2AD70EDB001CF60B /* ProductTableViewCell.swift in Sources */,
+				2D3282532ADAF4E700F8E29E /* recomandProductTableViewCell.swift in Sources */,
+				2D32825F2ADC1FAC00F8E29E /* RecomandCollectionViewCell.swift in Sources */,
 				2D51EC782ACF25B10059FC70 /* ChatingViewController.swift in Sources */,
 				2D51EC7A2ACF25E90059FC70 /* MyViewController.swift in Sources */,
+				2D3282592ADAF76A00F8E29E /* CollectionTableViewCell.swift in Sources */,
 				954B6B812AC57DAA00FDCFAB /* AppDelegate.swift in Sources */,
 				2D51EC742ACF257A0059FC70 /* LifeViewController.swift in Sources */,
 				2DFBB3612AD6EEB6005143A4 /* HomeViewController.swift in Sources */,

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recomandProductTableViewCell" rowHeight="185" id="KGk-i7-Jjw" customClass="recomandProductTableViewCell" customModule="iOS_Study_B" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="284"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="284"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOi-3O-NwU">
+                        <rect key="frame" x="0.0" y="50" width="393" height="234"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sLs-fV-i1F">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="234"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QhA-EF-dkm">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="sLs-fV-i1F" firstAttribute="trailing" secondItem="Ifr-8H-wJT" secondAttribute="trailing" id="18e-64-n4Q"/>
+                            <constraint firstItem="sLs-fV-i1F" firstAttribute="leading" secondItem="Ifr-8H-wJT" secondAttribute="leading" id="350-aT-aRs"/>
+                            <constraint firstItem="sLs-fV-i1F" firstAttribute="height" secondItem="Ifr-8H-wJT" secondAttribute="height" id="Cao-9i-OC7"/>
+                            <constraint firstItem="sLs-fV-i1F" firstAttribute="top" secondItem="mQh-Lm-kzU" secondAttribute="top" id="JNl-lu-m4y"/>
+                            <constraint firstItem="mQh-Lm-kzU" firstAttribute="bottom" secondItem="sLs-fV-i1F" secondAttribute="bottom" id="Sbh-bz-40B"/>
+                            <constraint firstItem="mQh-Lm-kzU" firstAttribute="trailing" secondItem="sLs-fV-i1F" secondAttribute="trailing" id="TeV-u5-laX"/>
+                            <constraint firstItem="sLs-fV-i1F" firstAttribute="top" secondItem="Ifr-8H-wJT" secondAttribute="top" id="Xcm-gj-Qnm"/>
+                            <constraint firstItem="sLs-fV-i1F" firstAttribute="width" secondItem="Ifr-8H-wJT" secondAttribute="width" priority="250" id="cNh-Ss-3T7"/>
+                            <constraint firstItem="sLs-fV-i1F" firstAttribute="leading" secondItem="mQh-Lm-kzU" secondAttribute="leading" id="i3E-J3-K6t"/>
+                            <constraint firstItem="sLs-fV-i1F" firstAttribute="bottom" secondItem="Ifr-8H-wJT" secondAttribute="bottom" id="qbp-jE-TV5"/>
+                        </constraints>
+                        <viewLayoutGuide key="contentLayoutGuide" id="Ifr-8H-wJT"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="mQh-Lm-kzU"/>
+                    </scrollView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시원한 여름 간식의 계절 🍉🍧🍦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50q-bg-bhd">
+                        <rect key="frame" x="13" y="25" width="232" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wkp-ju-JRD">
+                        <rect key="frame" x="346.33333333333331" y="18.333333333333332" width="33.666666666666686" height="34.333333333333343"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
+                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="tOi-3O-NwU" secondAttribute="bottom" id="4By-an-RYk"/>
+                    <constraint firstAttribute="trailing" secondItem="Wkp-ju-JRD" secondAttribute="trailing" constant="13" id="9Nu-sE-oxG"/>
+                    <constraint firstItem="50q-bg-bhd" firstAttribute="centerY" secondItem="Wkp-ju-JRD" secondAttribute="centerY" id="IEH-eS-EbI"/>
+                    <constraint firstItem="50q-bg-bhd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="Nfn-bG-Q6t"/>
+                    <constraint firstItem="tOi-3O-NwU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="Vhg-wS-u8X"/>
+                    <constraint firstAttribute="trailing" secondItem="tOi-3O-NwU" secondAttribute="trailing" id="Xmt-v4-fa0"/>
+                    <constraint firstItem="tOi-3O-NwU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ihv-EU-qew"/>
+                    <constraint firstItem="50q-bg-bhd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="op1-qV-81N"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="RecomandCollectionView" destination="sLs-fV-i1F" id="78b-M8-0o3"/>
+                <outlet property="buttonLookCollection" destination="Wkp-ju-JRD" id="ch7-OM-gma"/>
+                <outlet property="labelCollectionTitle" destination="50q-bg-bhd" id="4DP-Ik-hK1"/>
+                <outlet property="scrollview" destination="tOi-3O-NwU" id="DLZ-aC-pO8"/>
+            </connections>
+            <point key="canvasLocation" x="-75.572519083969468" y="69.014084507042256"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
