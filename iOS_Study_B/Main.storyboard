@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="caW-Ym-HrG">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="K6J-BW-fJg">
+            <objects>
+                <viewController id="caW-Ym-HrG" customClass="ViewController" customModule="iOS_Study_B" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IoA-FM-qcO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SP-yd-6hX">
+                                <rect key="frame" x="32" y="59" width="99" height="36"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.down" catalog="system" title="광명동 ">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tV-3Y-fwd">
+                                <rect key="frame" x="266.33333333333331" y="60" width="49.666666666666686" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiz-UK-Rbq">
+                                <rect key="frame" x="216" y="60" width="51" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="list.triangle" catalog="system">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMV-zt-sM3">
+                                <rect key="frame" x="316" y="60" width="49" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="bell" catalog="system">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVb-XK-qbR">
+                                <rect key="frame" x="0.0" y="727" width="393" height="91"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="홈" image="homekit" catalog="system" id="y24-ed-eVH"/>
+                                    <tabBarItem title="동네생활" image="list.bullet.rectangle.portrait" catalog="system" id="Ox7-YM-pfz"/>
+                                    <tabBarItem title="내 근처" image="mappin.and.ellipse" catalog="system" id="rUC-uZ-nGb"/>
+                                    <tabBarItem title="채팅" image="message" catalog="system" id="m82-7f-83W"/>
+                                    <tabBarItem title="나의 당근" image="person" catalog="system" id="0lp-sf-gaw"/>
+                                </items>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="KIS-yo-0Hs">
+                                <rect key="frame" x="-9" y="126" width="393" height="601"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="HomeTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeTableViewCell" textLabel="rRi-qu-v9c" detailTextLabel="zIz-Zl-KhQ" imageView="y9z-W7-UNG" rowHeight="135" style="IBUITableViewCellStyleSubtitle" id="gjs-R2-aMl" customClass="HomeTableViewCell" customModule="iOS_Study_B" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gjs-R2-aMl" id="4K4-cF-STP">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="135"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="[급구] 50만원 제공! 쿵야 레스토랑에서 시식 알바 구함니다. ^^-🧅" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rRi-qu-v9c">
+                                                    <rect key="frame" x="170" y="44" width="190.33333333333334" height="28.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="당근알바﹒이벤트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zIz-Zl-KhQ">
+                                                    <rect key="frame" x="170" y="74.666666666666671" width="85" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="onionimage" insetsLayoutMarginsFromSafeArea="NO" image="1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="y9z-W7-UNG">
+                                                    <rect key="frame" x="20" y="0.0" width="135" height="135"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="APM1TableViewCell" textLabel="ln4-Fg-5D4" detailTextLabel="VkQ-PC-6gc" imageView="CkJ-Lb-3zB" rowHeight="135" style="IBUITableViewCellStyleSubtitle" id="ljh-qk-gse" customClass="APm1ViewCell" customModule="iOS_Study_B" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="185" width="393" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ljh-qk-gse" id="aDp-fV-OsE">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="135"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="에어팟맥스 실버" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ln4-Fg-5D4">
+                                                    <rect key="frame" x="170" y="52" width="76.333333333333329" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="서울특별시 양천구﹒6일전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VkQ-PC-6gc">
+                                                    <rect key="frame" x="170" y="68.333333333333329" width="127.33333333333333" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="2" id="CkJ-Lb-3zB">
+                                                    <rect key="frame" x="20" y="0.0" width="135" height="135"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="apm1image" destination="aDp-fV-OsE" id="1NO-b5-eN7"/>
+                                            <outlet property="sub2" destination="VkQ-PC-6gc" id="Q6R-e2-8tD"/>
+                                            <outlet property="title2" destination="ln4-Fg-5D4" id="0BZ-ma-PKW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="JGA-ue-gzN" detailTextLabel="wVd-jW-mbo" imageView="68K-mb-ggY" rowHeight="135" style="IBUITableViewCellStyleSubtitle" id="fN3-sN-lsZ">
+                                        <rect key="frame" x="0.0" y="320" width="393" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fN3-sN-lsZ" id="dcn-ln-Vex">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="135"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="에어팟 맥스 스페이스그레이 S급 판매합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JGA-ue-gzN">
+                                                    <rect key="frame" x="170" y="44" width="142.33333333333334" height="28.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="서울특별시 양천구﹒3시간 전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wVd-jW-mbo">
+                                                    <rect key="frame" x="170" y="74.666666666666671" width="141" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="3" id="68K-mb-ggY">
+                                                    <rect key="frame" x="20" y="0.0" width="135" height="135"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="U4y-FL-I8L" detailTextLabel="Ksm-rr-KRP" imageView="qZu-Ww-qfR" rowHeight="135" style="IBUITableViewCellStyleSubtitle" id="PEn-Of-nsQ">
+                                        <rect key="frame" x="0.0" y="455" width="393" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PEn-Of-nsQ" id="MhO-C3-41Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="135"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="[S급]에어팟 맥스 스페이스그레이 풀박 판매합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U4y-FL-I8L">
+                                                    <rect key="frame" x="170" y="44" width="162" height="28.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="서울특별시 양천구﹒1일전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ksm-rr-KRP">
+                                                    <rect key="frame" x="170" y="74.666666666666671" width="125" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="4" id="qZu-Ww-qfR">
+                                                    <rect key="frame" x="20" y="0.0" width="135" height="135"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GY-t2-Otc">
+                                <rect key="frame" x="296.33333333333331" y="725" width="86.666666666666686" height="35.666666666666629"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+ 글쓰기">
+                                    <backgroundConfiguration key="background" cornerRadius="30">
+                                        <color key="backgroundColor" red="1" green="0.52092610939999995" blue="0.18009294810000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mj4-KH-rmg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0SP-yd-6hX" firstAttribute="leading" secondItem="mj4-KH-rmg" secondAttribute="leading" constant="32" id="22r-Z5-FVv"/>
+                            <constraint firstItem="DVb-XK-qbR" firstAttribute="top" secondItem="KIS-yo-0Hs" secondAttribute="bottom" id="DBP-pS-xwr"/>
+                            <constraint firstItem="cMV-zt-sM3" firstAttribute="leading" secondItem="6tV-3Y-fwd" secondAttribute="trailing" id="HPn-1e-lCl"/>
+                            <constraint firstItem="0SP-yd-6hX" firstAttribute="top" secondItem="IoA-FM-qcO" secondAttribute="top" constant="59" id="Kj9-r6-A6r"/>
+                            <constraint firstItem="mj4-KH-rmg" firstAttribute="trailing" secondItem="cMV-zt-sM3" secondAttribute="trailing" constant="28" id="LBq-k1-Jdy"/>
+                            <constraint firstItem="cMV-zt-sM3" firstAttribute="top" secondItem="IoA-FM-qcO" secondAttribute="top" constant="60" id="UZI-PL-b2V"/>
+                            <constraint firstItem="DVb-XK-qbR" firstAttribute="bottom" secondItem="mj4-KH-rmg" secondAttribute="bottom" id="Ytk-mX-wtP"/>
+                            <constraint firstItem="mj4-KH-rmg" firstAttribute="bottom" secondItem="1GY-t2-Otc" secondAttribute="bottom" constant="57.329999999999998" id="dRp-zM-QdV"/>
+                            <constraint firstItem="mj4-KH-rmg" firstAttribute="trailing" secondItem="1GY-t2-Otc" secondAttribute="trailing" constant="10" id="dpN-hv-aCY"/>
+                            <constraint firstItem="cMV-zt-sM3" firstAttribute="leading" secondItem="wiz-UK-Rbq" secondAttribute="trailing" constant="49" id="gCy-tj-XXx"/>
+                            <constraint firstItem="wiz-UK-Rbq" firstAttribute="top" secondItem="IoA-FM-qcO" secondAttribute="top" constant="60" id="iLm-30-824"/>
+                            <constraint firstItem="DVb-XK-qbR" firstAttribute="leading" secondItem="mj4-KH-rmg" secondAttribute="leading" id="igO-gt-2S1"/>
+                            <constraint firstItem="mj4-KH-rmg" firstAttribute="trailing" secondItem="DVb-XK-qbR" secondAttribute="trailing" id="l1F-L3-CUt"/>
+                            <constraint firstItem="6tV-3Y-fwd" firstAttribute="top" secondItem="IoA-FM-qcO" secondAttribute="top" constant="60" id="syd-3s-PHO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PDtableView" destination="KIS-yo-0Hs" id="wd8-3i-Y1p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gof-Pv-bsR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58.778625954198468" y="41.549295774647888"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="248" height="248"/>
+        <image name="2" width="244" height="244"/>
+        <image name="3" width="236" height="236"/>
+        <image name="4" width="244" height="244"/>
+        <image name="bell" catalog="system" width="125" height="128"/>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
+        <image name="list.triangle" catalog="system" width="128" height="91"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
+        <image name="message" catalog="system" width="128" height="116"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
