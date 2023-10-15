@@ -10,6 +10,13 @@ import UIKit
 class RegisterViewController: UIViewController {
 
     //Mark: -Properties
+    var email: String = ""
+    var name: String = ""
+    var nickname: String = ""
+    var password: String = ""
+    
+    var userInfo: ((UserInfo)->Void)?
+    
     //유효성 검사를 위한 프로퍼티
     var isVaildEmail = false{
         didSet{ //프로퍼티 옵저버
@@ -64,12 +71,16 @@ class RegisterViewController: UIViewController {
         switch sender{
         case emailTextField:
             self.isVaildEmail=text.isValidEmail()
+            self.email=text
         case nameTextField:
             self.isVaildName=text.count>2
+            self.name=text
         case nicknameTextField:
             self.isVaildNickname=text.count>2
+            self.nickname=text
         case passwordTextField:
             self.isVaildPassword=text.isValidPassword()
+            self.password=text
         default :
             fatalError("Missing textfield...")
             
@@ -80,6 +91,18 @@ class RegisterViewController: UIViewController {
         //뒤로가기
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func registerButtonDidTap(_ sender: UIButton) {
+        //뒤로가기
+        self.navigationController?.popViewController(animated: true)
+        let userInfo=UserInfo(
+            email: self.email,
+            name: self.name,
+            nickname: self.nickname,
+            password: self.password)
+        self.userInfo?(userInfo)
+    }
+    
     
     //Mark: -Helpers
     private func setupTextField(){
@@ -100,7 +123,7 @@ class RegisterViewController: UIViewController {
             else{
                 self.signupButton.isEnabled=false
                 UIView.animate(withDuration: 0.33){
-                    self.signupButton.backgroundColor = UIColor.disabledColor}
+                    self.signupButton.backgroundColor = UIColor.disabledButtonColor}
                 }
     }
     private func setupAttribute(){

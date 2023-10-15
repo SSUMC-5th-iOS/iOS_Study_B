@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090D45E02ADA91500075CBC5 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090D45DF2ADA91500075CBC5 /* UserInfo.swift */; };
 		09A144562AD28A1A008DE6A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A144552AD28A1A008DE6A4 /* LoginViewController.swift */; };
 		09A144582AD292D3008DE6A4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A144572AD292D3008DE6A4 /* RegisterViewController.swift */; };
 		09A1445A2AD68652008DE6A4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A144592AD68652008DE6A4 /* UIView+Extension.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		090D45DF2ADA91500075CBC5 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		09A144552AD28A1A008DE6A4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		09A144572AD292D3008DE6A4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		09A144592AD68652008DE6A4 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				09A144572AD292D3008DE6A4 /* RegisterViewController.swift */,
+				090D45DF2ADA91500075CBC5 /* UserInfo.swift */,
 				954B6B802AC57DAA00FDCFAB /* AppDelegate.swift */,
 				954B6B822AC57DAA00FDCFAB /* SceneDelegate.swift */,
 				954B6B862AC57DAA00FDCFAB /* Main.storyboard */,
@@ -154,6 +157,7 @@
 				09A1445C2AD6875E008DE6A4 /* UIViewController+Extension.swift in Sources */,
 				09A144562AD28A1A008DE6A4 /* LoginViewController.swift in Sources */,
 				954B6B812AC57DAA00FDCFAB /* AppDelegate.swift in Sources */,
+				090D45E02ADA91500075CBC5 /* UserInfo.swift in Sources */,
 				954B6B832AC57DAA00FDCFAB /* SceneDelegate.swift in Sources */,
 				09A1445A2AD68652008DE6A4 /* UIView+Extension.swift in Sources */,
 				09A144582AD292D3008DE6A4 /* RegisterViewController.swift in Sources */,

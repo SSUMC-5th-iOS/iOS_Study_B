@@ -11,8 +11,10 @@ class LoginViewController: UIViewController {
 
     var email = String()
     var password = String()
+    var userInfo : UserInfo?
     
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,16 +26,29 @@ class LoginViewController: UIViewController {
         // 옵셔널
         // 값이 있을 수도 있고 없을 수도 있음
         let text = sender.text ?? ""
+        self.loginButton.backgroundColor = text.isValidEmail() ? .facebookColor : .disabledButtonColor
         self.email = text
         }
     
     @IBAction func passwordTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
+        
+        self.loginButton.backgroundColor = text.count > 2 ? .facebookColor : .disabledButtonColor
+        // >2로 조건 걸어놓는 거 별론거같은데... 그냥 isValidPassword가 나을듯?
         self.password = text
     }
     
     @IBAction func loginButtonDidTap(_ sender: UIButton) {
-        
+        // 회원가입 정보를 전달받아서, 그것과 textField 데이터가 일치하면, 로그인이 되어야한다
+        guard let userInfo = self.userInfo else {return}
+        // 데이터가 있으면 새롭게 let으로 선언 없으면 else로 returng하여 해당 함수 종료
+        if userInfo.email == self.email
+            && userInfo.password == self.password{
+            let vc = storyboard? .instantiateViewController(withIdentifier: "TabBarVC") as! UITabBarController
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion : nil)
+        }else {
+        }
     }
     
     @IBAction func registerButtonDidTap(_ sender: Any) {
@@ -45,6 +60,9 @@ class LoginViewController: UIViewController {
         // 3.화면전환 메소드를 이용하여 화면 전환
         // self.present(registerViewController,animated: true,completion: nil)
         self.navigationController?.pushViewController(registerViewController, animated: true)
+        // ARC -> 강한참조 / 약한참조 -> ARC 낮춰줌
+        registerViewController.userInfo = { [weak self] (userInfo) in self?.userInfo = userInfo
+        }
     }
     private func setupAttribute(){
         //registerButton

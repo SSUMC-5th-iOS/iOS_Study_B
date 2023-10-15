@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 public extension UIColor {
     static let facebookColor = UIColor(named: "facebookColor")
-    static let disabledColor = UIColor(named: "disabledColor")
+    static let disabledButtonColor = UIColor(named: "disabledButtonColor")
 }
