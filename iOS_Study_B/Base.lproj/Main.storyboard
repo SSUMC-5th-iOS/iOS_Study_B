@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NiT-df-0eM">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -12,18 +12,70 @@
         <scene sceneID="oVk-9z-6uj">
             <objects>
                 <tabBarController id="NiT-df-0eM" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="homekit" catalog="system" id="kHH-Tn-FIH">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kHH-Tn-FIH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="CBG-OL-hdz"/>
+                        <segue destination="Gy4-BX-Ipt" kind="relationship" relationship="viewControllers" id="z5M-8A-uws"/>
+                        <segue destination="bwV-5U-AMK" kind="relationship" relationship="viewControllers" id="fDt-3F-cFB"/>
+                        <segue destination="dLN-ei-tUe" kind="relationship" relationship="viewControllers" id="Vly-tq-HSj"/>
+                        <segue destination="SF3-NM-zMc" kind="relationship" relationship="viewControllers" id="tBl-Yr-Fe0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cDY-pm-gyx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-709" y="894"/>
+            <point key="canvasLocation" x="-1021" y="1069"/>
+        </scene>
+        <!--체팅-->
+        <scene sceneID="L8R-1U-Lpo">
+            <objects>
+                <viewController id="dLN-ei-tUe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OyL-ZW-DYz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Zp5-1Q-oIf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="체팅" image="message" catalog="system" id="LnF-UW-QwO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8LS-a5-vaO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-765" y="240"/>
+        </scene>
+        <!--동네생활-->
+        <scene sceneID="gX6-PB-H5k">
+            <objects>
+                <viewController id="Gy4-BX-Ipt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MQG-Gr-I2F">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XxD-sP-ZQg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="동네생활" image="list.bullet.rectangle" catalog="system" id="aHm-CW-d3V"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r0W-yk-PER" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="292"/>
+        </scene>
+        <!--내 근처-->
+        <scene sceneID="9c4-Dh-LqR">
+            <objects>
+                <viewController id="bwV-5U-AMK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="08g-RE-7wC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PxU-WD-JvU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="내 근처" image="mappin.and.ellipse" catalog="system" id="Uru-WT-Nqs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKT-OE-sko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576" y="269"/>
         </scene>
         <!--홈-->
         <scene sceneID="tne-QT-ifu">
@@ -121,13 +173,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="231" y="907"/>
+            <point key="canvasLocation" x="254" y="1454"/>
+        </scene>
+        <!--나의 당근-->
+        <scene sceneID="abL-64-51H">
+            <objects>
+                <viewController id="SF3-NM-zMc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="old-I8-ljt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KCU-dZ-z91"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="나의 당근" image="person" catalog="system" id="mLo-Uo-vRY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8M9-T1-MnI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160" y="821"/>
         </scene>
     </scenes>
     <resources>
         <image name="2" width="294" height="94"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
+        <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
+        <image name="message" catalog="system" width="128" height="116"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
