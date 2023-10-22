@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8F9-78-UpF">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--홈-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_Study_B" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,61 +74,222 @@
                                     <constraint firstItem="X8G-Mb-lJh" firstAttribute="centerY" secondItem="UCO-57-RRy" secondAttribute="centerY" id="wef-gd-HII"/>
                                 </constraints>
                             </view>
-                            <tabBar contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDu-hG-Eed">
-                                <rect key="frame" x="0.0" y="762" width="393" height="90"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="Pr4-l0-PpX"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem title="홈" image="house" catalog="system" id="QLJ-SK-LF9"/>
-                                    <tabBarItem title="동네생활" image="newspaper" catalog="system" id="Jmb-SI-zx5"/>
-                                    <tabBarItem title="내 근처" image="mappin.and.ellipse" catalog="system" id="OZe-Qd-S8I"/>
-                                    <tabBarItem title="채팅" image="message" catalog="system" id="AHf-b3-ZRf"/>
-                                    <tabBarItem title="나의 당근" image="person.crop.circle" catalog="system" id="Gim-W5-VV6"/>
-                                </items>
-                            </tabBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="U6K-Tb-vlv">
-                                <rect key="frame" x="0.0" y="115" width="393" height="647"/>
+                                <rect key="frame" x="0.0" y="115" width="393" height="654"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bDu-hG-Eed" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="09o-ly-Z8d"/>
-                            <constraint firstAttribute="bottom" secondItem="bDu-hG-Eed" secondAttribute="bottom" id="7Av-tG-UkM"/>
-                            <constraint firstItem="bDu-hG-Eed" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I3j-xM-p2n"/>
                             <constraint firstItem="UCO-57-RRy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="J7s-S6-h14"/>
                             <constraint firstItem="U6K-Tb-vlv" firstAttribute="top" secondItem="UCO-57-RRy" secondAttribute="bottom" id="KyE-fc-1zN"/>
                             <constraint firstItem="UCO-57-RRy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LYO-U0-mxt"/>
                             <constraint firstItem="U6K-Tb-vlv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ONG-02-QRJ"/>
-                            <constraint firstItem="bDu-hG-Eed" firstAttribute="top" secondItem="U6K-Tb-vlv" secondAttribute="bottom" id="OZz-ZV-NTQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UCO-57-RRy" secondAttribute="trailing" id="RDk-bj-PRC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="U6K-Tb-vlv" secondAttribute="bottom" id="gyv-JV-aRj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U6K-Tb-vlv" secondAttribute="trailing" id="jbb-pQ-ovc"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="홈" id="FWR-la-tZ1">
+                        <imageReference key="image" image="house" catalog="system" symbolScale="default" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="house.fill" catalog="system" symbolScale="default" renderingMode="hierarchical" variableValue="0.0">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="U6K-Tb-vlv" id="oSl-6M-UaJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="1967.175572519084" y="-27.464788732394368"/>
+        </scene>
+        <!--동네생활-->
+        <scene sceneID="HOd-hk-ld9">
+            <objects>
+                <viewController id="7W3-bt-isB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ArK-PF-CtQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Dy8-Nn-zK5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="동네생활" id="Cvo-UE-SHK">
+                        <imageReference key="image" image="newspaper" catalog="system" symbolScale="default" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="newspaper.fill" catalog="system" symbolScale="default" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0uv-nS-ZeW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="623"/>
+        </scene>
+        <!--내 근처-->
+        <scene sceneID="ksc-6a-FoN">
+            <objects>
+                <viewController id="xWW-up-PMa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6hr-IS-Sxy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="h4G-oA-uLw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="내 근처" id="hk1-N8-0G1">
+                        <imageReference key="image" image="mappin.circle" catalog="system" symbolScale="default" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="mappin.circle.fill" catalog="system" symbolScale="default" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IFV-3i-wsR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="1278"/>
+        </scene>
+        <!--채팅-->
+        <scene sceneID="Bfb-uQ-OjF">
+            <objects>
+                <viewController id="l5G-KA-QK0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eZc-kS-E4Y">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4l3-to-0JS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="채팅" id="6JZ-jO-xk2">
+                        <imageReference key="image" image="message" catalog="system" symbolScale="default" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="message.fill" catalog="system" symbolScale="default" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9jH-cn-Lb7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="1975"/>
+        </scene>
+        <!--나의 당근-->
+        <scene sceneID="qQC-wr-qHk">
+            <objects>
+                <viewController id="v9H-fr-Pke" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8rF-zd-WS2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vaK-vp-Wot"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="나의 당근" id="MCd-D5-Yd1">
+                        <imageReference key="image" image="person" catalog="system" symbolScale="default" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <color key="badgeColor" systemColor="labelColor"/>
+                        <imageReference key="selectedImage" image="person.fill" catalog="system" symbolScale="default" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="labelColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="np9-Ds-vcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1941" y="2653"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zzc-ot-anO">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8F9-78-UpF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xsG-vh-Aww">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="SUH-Xb-Scv"/>
+                        <segue destination="7W3-bt-isB" kind="relationship" relationship="viewControllers" id="PFu-xC-4Sx"/>
+                        <segue destination="xWW-up-PMa" kind="relationship" relationship="viewControllers" id="7tO-50-Tmn"/>
+                        <segue destination="l5G-KA-QK0" kind="relationship" relationship="viewControllers" id="Bix-id-7Zh"/>
+                        <segue destination="v9H-fr-Pke" kind="relationship" relationship="viewControllers" id="KHd-Ss-kPW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIz-5Z-jkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147" y="1229"/>
         </scene>
     </scenes>
     <resources>
         <image name="bell" catalog="system" width="125" height="128"/>
         <image name="chevron.down" catalog="system" width="128" height="70"/>
         <image name="house" catalog="system" width="128" height="104"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="65"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="mappin.and.ellipse" catalog="system" width="110" height="128"/>
+        <image name="mappin.circle" catalog="system" width="128" height="123"/>
+        <image name="mappin.circle.fill" catalog="system" width="128" height="123"/>
         <image name="message" catalog="system" width="128" height="116"/>
+        <image name="message.fill" catalog="system" width="128" height="114"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
-        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
+        <image name="newspaper.fill" catalog="system" width="128" height="112"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="scrcell" id="uvu-jG-pxJ" customClass="MyCollectionViewCell" customModule="iOS_Study_B" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="236"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eos-x0-4Ok">
+                <rect key="frame" x="0.0" y="0.0" width="140" height="236"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dnA-2L-oBn">
+                        <rect key="frame" x="5" y="5" width="130" height="130"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="dnA-2L-oBn" secondAttribute="height" multiplier="1:1" id="Ojy-oA-ZxQ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHR-yy-gAr">
+                        <rect key="frame" x="5" y="145" width="130" height="21.666666666666657"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIR-Xm-eEE">
+                        <rect key="frame" x="5" y="171.66666666666666" width="130" height="21.666666666666657"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="ZHR-yy-gAr" firstAttribute="top" secondItem="dnA-2L-oBn" secondAttribute="bottom" constant="10" id="9mn-tD-boj"/>
+                    <constraint firstItem="ZHR-yy-gAr" firstAttribute="trailing" secondItem="dnA-2L-oBn" secondAttribute="trailing" id="BnY-Ml-9s6"/>
+                    <constraint firstItem="CIR-Xm-eEE" firstAttribute="top" secondItem="ZHR-yy-gAr" secondAttribute="bottom" constant="5" id="Fng-2m-pWl"/>
+                    <constraint firstItem="CIR-Xm-eEE" firstAttribute="leading" secondItem="ZHR-yy-gAr" secondAttribute="leading" id="HCN-j1-wWB"/>
+                    <constraint firstItem="dnA-2L-oBn" firstAttribute="centerX" secondItem="eos-x0-4Ok" secondAttribute="centerX" id="L5H-N2-jD6"/>
+                    <constraint firstItem="dnA-2L-oBn" firstAttribute="leading" secondItem="eos-x0-4Ok" secondAttribute="leading" constant="5" id="VDR-Sz-Adn"/>
+                    <constraint firstItem="dnA-2L-oBn" firstAttribute="top" secondItem="eos-x0-4Ok" secondAttribute="top" constant="5" id="kOO-ww-tP0"/>
+                    <constraint firstItem="CIR-Xm-eEE" firstAttribute="trailing" secondItem="ZHR-yy-gAr" secondAttribute="trailing" id="mPA-Zx-LUv"/>
+                    <constraint firstItem="ZHR-yy-gAr" firstAttribute="leading" secondItem="dnA-2L-oBn" secondAttribute="leading" id="rZ1-ex-SfV"/>
+                    <constraint firstAttribute="trailing" secondItem="dnA-2L-oBn" secondAttribute="trailing" constant="5" id="v6G-Wy-W4X"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="140" height="236"/>
+            <connections>
+                <outlet property="scrImageView" destination="dnA-2L-oBn" id="3sF-s9-81n"/>
+                <outlet property="scrPrice" destination="CIR-Xm-eEE" id="ziO-GE-ldE"/>
+                <outlet property="scrTitle" destination="ZHR-yy-gAr" id="Gh2-pd-M3d"/>
+            </connections>
+            <point key="canvasLocation" x="192.36641221374046" y="173.94366197183101"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
