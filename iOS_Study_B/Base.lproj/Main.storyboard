@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_Study_B" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="iOS_Study_B" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,15 +68,30 @@
                                     <constraint firstAttribute="trailing" secondItem="aq6-Hh-qTz" secondAttribute="trailing" constant="15" id="w4c-68-y3G"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9jI-aU-Dy1">
+                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9jI-aU-Dy1" secondAttribute="trailing" id="0ga-Bz-jtS"/>
                             <constraint firstItem="fB8-s6-Biu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BH9-IN-jt7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9jI-aU-Dy1" secondAttribute="trailing" id="F9v-Ca-ZWa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9jI-aU-Dy1" secondAttribute="bottom" id="Mhb-eM-jcS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9jI-aU-Dy1" secondAttribute="bottom" id="aK4-TY-KUp"/>
                             <constraint firstItem="fB8-s6-Biu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jq0-Ff-YyL"/>
+                            <constraint firstItem="9jI-aU-Dy1" firstAttribute="top" secondItem="fB8-s6-Biu" secondAttribute="bottom" id="pJI-pF-inN"/>
+                            <constraint firstItem="9jI-aU-Dy1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pl0-0j-2Eb"/>
+                            <constraint firstItem="9jI-aU-Dy1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sYu-Fm-sIA"/>
+                            <constraint firstItem="9jI-aU-Dy1" firstAttribute="top" secondItem="fB8-s6-Biu" secondAttribute="bottom" id="uUj-ss-tdw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fB8-s6-Biu" secondAttribute="trailing" id="zyy-j0-Qh7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableview" destination="9jI-aU-Dy1" id="DtQ-pW-GQe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
