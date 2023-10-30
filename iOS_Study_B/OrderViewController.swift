@@ -13,8 +13,6 @@ class OrderViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.interactivePopGestureRecognizer?.delegate=nil
 
-
-        // Do any additional setup after loading the view.
     }
     @IBAction func backButtonDidTap(_ sender: UIBarButtonItem) {
         //뒤로가기
