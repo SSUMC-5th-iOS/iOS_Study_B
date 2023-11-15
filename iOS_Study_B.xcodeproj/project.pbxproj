@@ -13,6 +13,8 @@
 		954B6B882AC57DAA00FDCFAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954B6B862AC57DAA00FDCFAB /* Main.storyboard */; };
 		954B6B8A2AC57DAB00FDCFAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954B6B892AC57DAB00FDCFAB /* Assets.xcassets */; };
 		954B6B8D2AC57DAB00FDCFAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954B6B8B2AC57DAB00FDCFAB /* LaunchScreen.storyboard */; };
+		CC7D36DA2B04DA780069F109 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CC7D36D92B04DA780069F109 /* SnapKit */; };
+		CC7D36DC2B04DA780069F109 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CC7D36DB2B04DA780069F109 /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7D36DA2B04DA780069F109 /* SnapKit in Frameworks */,
+				CC7D36DC2B04DA780069F109 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,10 @@
 			dependencies = (
 			);
 			name = iOS_Study_B;
+			packageProductDependencies = (
+				CC7D36D92B04DA780069F109 /* SnapKit */,
+				CC7D36DB2B04DA780069F109 /* SnapKit-Dynamic */,
+			);
 			productName = iOS_Study_B;
 			productReference = 954B6B7D2AC57DAA00FDCFAB /* iOS_Study_B.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 954B6B742AC57DAA00FDCFAB;
+			packageReferences = (
+				CC7D36D82B04DA780069F109 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 954B6B7E2AC57DAA00FDCFAB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -291,7 +302,6 @@
 				INFOPLIST_FILE = iOS_Study_B/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +328,6 @@
 				INFOPLIST_FILE = iOS_Study_B/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,6 +365,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CC7D36D82B04DA780069F109 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CC7D36D92B04DA780069F109 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC7D36D82B04DA780069F109 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		CC7D36DB2B04DA780069F109 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC7D36D82B04DA780069F109 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 954B6B752AC57DAA00FDCFAB /* Project object */;
 }
