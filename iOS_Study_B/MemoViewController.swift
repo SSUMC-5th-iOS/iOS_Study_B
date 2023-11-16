@@ -65,10 +65,10 @@ class MemoViewController: UIViewController {
             if let viewController = navigationController?.viewControllers.first(where: { $0 is ViewController }) as? ViewController {
                 if let index = memoIndex {
                     //기존 메모 수정
-                    viewController.memos[index] = content
+                    viewController.tasks[index] = content
                 } else {
                     //새 메모 추가
-                    viewController.memos.append(content)
+                    viewController.tasks.append(content)
                 }
                 viewController.tableview.reloadData()
                 navigationController?.popViewController(animated: true)
