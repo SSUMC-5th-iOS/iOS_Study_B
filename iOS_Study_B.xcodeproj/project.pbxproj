@@ -15,6 +15,8 @@
 		954B6B8D2AC57DAB00FDCFAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 954B6B8B2AC57DAB00FDCFAB /* LaunchScreen.storyboard */; };
 		CC7D36DA2B04DA780069F109 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CC7D36D92B04DA780069F109 /* SnapKit */; };
 		CC7D36DC2B04DA780069F109 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CC7D36DB2B04DA780069F109 /* SnapKit-Dynamic */; };
+		CC7D36DE2B04E1380069F109 /* MemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7D36DD2B04E1380069F109 /* MemoTableViewCell.swift */; };
+		CC7D36E42B05A0D60069F109 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7D36E32B05A0D60069F109 /* MemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		954B6B892AC57DAB00FDCFAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		954B6B8C2AC57DAB00FDCFAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		954B6B8E2AC57DAB00FDCFAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC7D36DD2B04E1380069F109 /* MemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewCell.swift; sourceTree = "<group>"; };
+		CC7D36E32B05A0D60069F109 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +64,11 @@
 		954B6B7F2AC57DAA00FDCFAB /* iOS_Study_B */ = {
 			isa = PBXGroup;
 			children = (
+				CC7D36DD2B04E1380069F109 /* MemoTableViewCell.swift */,
 				954B6B802AC57DAA00FDCFAB /* AppDelegate.swift */,
 				954B6B822AC57DAA00FDCFAB /* SceneDelegate.swift */,
 				954B6B842AC57DAA00FDCFAB /* ViewController.swift */,
+				CC7D36E32B05A0D60069F109 /* MemoViewController.swift */,
 				954B6B862AC57DAA00FDCFAB /* Main.storyboard */,
 				954B6B892AC57DAB00FDCFAB /* Assets.xcassets */,
 				954B6B8B2AC57DAB00FDCFAB /* LaunchScreen.storyboard */,
@@ -151,7 +157,9 @@
 			files = (
 				954B6B852AC57DAA00FDCFAB /* ViewController.swift in Sources */,
 				954B6B812AC57DAA00FDCFAB /* AppDelegate.swift in Sources */,
+				CC7D36E42B05A0D60069F109 /* MemoViewController.swift in Sources */,
 				954B6B832AC57DAA00FDCFAB /* SceneDelegate.swift in Sources */,
+				CC7D36DE2B04E1380069F109 /* MemoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
