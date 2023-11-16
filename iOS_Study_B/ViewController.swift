@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var memos: [String] = []
+    var tasks: [String] = []
     
     let tableview:UITableView = {
         let table = UITableView()
@@ -63,20 +63,20 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MemoTableViewCell.identifier, for: indexPath) as? MemoTableViewCell else { return UITableViewCell() }
         
-        cell.label.text = memos[indexPath.row]
+        cell.label.text = tasks[indexPath.row]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedMemo = memos[indexPath.row]
+        let selectedMemo = tasks[indexPath.row]
         let memoViewController = MemoViewController()
         memoViewController.initialMemoContent = selectedMemo
         memoViewController.memoIndex = indexPath.row
         memoViewController.didUpdateMemo = { [weak self] updatedMemo in
             //메모 수정 시 업데이트
-            guard let self = self, let index = self.memos.firstIndex(of: selectedMemo) else { return }
-            self.memos[index] = updatedMemo
+            guard let self = self, let index = self.tasks.firstIndex(of: selectedMemo) else { return }
+            self.tasks[index] = updatedMemo
             self.tableview.reloadData()
         }
         navigationController?.pushViewController(memoViewController, animated: true)
