@@ -245,7 +245,14 @@ class ViewController: UIViewController {
         performCalculation(operation: *)
     }
     @objc func divButtonPressed() {
-        performCalculation(operation: /)
+        if number2TextField.text?.isEmpty == true {
+            performCalculation(operation: /)
+        }
+        else if let inputText2 = number2TextField.text, !inputText2.isEmpty, let divisor = Int(inputText2), divisor != 0 {
+                performCalculation(operation: /)
+            } else {
+                resultLabel.text = "0으로 나눌 수 없습니다."
+            }
     }
     @objc func resetButtonPressed() {
         number1TextField.text = ""
