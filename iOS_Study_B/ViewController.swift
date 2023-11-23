@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var tasks: [String] = []
+    var memos = [Memo]()
     
     let tableview:UITableView = {
         let table = UITableView()
@@ -21,16 +21,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        
         configureSubviews()
         makeConstraints()
+        setNavigationBar()
         
         tableview.dataSource = self
         tableview.delegate = self
         
+        view.backgroundColor = .white
+    }
+    
+    func setNavigationBar() {
+        let addButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addButtonTapped))
         navigationItem.title = "메모장"
-        setNavigationBar()
+        navigationItem.rightBarButtonItem = addButton
     }
     
     func configureSubviews() {
@@ -43,44 +47,71 @@ class ViewController: UIViewController {
         }
     }
     
-    func setNavigationBar() {
-        let addButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addButtonTapped))
-        navigationItem.rightBarButtonItem = addButton
+    @objc func addButtonTapped() {
+        let addMemoViewController = MemoViewController()
+        self.navigationController?.pushViewController(addMemoViewController, animated: true)
     }
     
-    @objc func addButtonTapped() {
-        let MemoViewController = MemoViewController()
-          self.navigationController?.pushViewController(MemoViewController, animated: true)
-      }
-  }
+    func addMemo(_ memo: Memo) {
+        memos.append(memo)
+        tableview.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+            let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (_, _, completionHandler) in
+
+                self.memos.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                completionHandler(true)
+            }
+
+            return UISwipeActionsConfiguration(actions: [deleteAction])
+        }
+
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let detailMemoViewController = MemoDetailViewController()
+
+            detailMemoViewController.memo = memos[indexPath.row]
+            detailMemoViewController.index = indexPath.row
+            detailMemoViewController.delegate = self
+
+            self.navigationController?.pushViewController(detailMemoViewController, animated: true)
+        }
+    
+}
 
 extension ViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasks.count
+        return memos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MemoTableViewCell.identifier, for: indexPath) as? MemoTableViewCell else { return UITableViewCell() }
         
-        cell.label.text = tasks[indexPath.row]
+        let memo = memos[indexPath.row]
+        cell.configure(with: memo)
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedMemo = tasks[indexPath.row]
-        let memoViewController = MemoViewController()
-        memoViewController.initialMemoContent = selectedMemo
-        memoViewController.memoIndex = indexPath.row
-        memoViewController.didUpdateMemo = { [weak self] updatedMemo in
-            //메모 수정 시 업데이트
-            guard let self = self, let index = self.tasks.firstIndex(of: selectedMemo) else { return }
-            self.tasks[index] = updatedMemo
-            self.tableview.reloadData()
-        }
-        navigationController?.pushViewController(memoViewController, animated: true)
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
     }
 }
 
+
+extension ViewController: MemoEditDelegate {
+    func didUpdateMemo(_ memo: Memo, atIndex index: Int) {
+        memos[index] = memo
+        tableview.reloadData()
+    }
+}
+
+extension ViewController: MemoDetailDelegate {
+    func didUpdateDetailMemo(_ memo: Memo, atIndex index: Int) {
+        memos[index] = memo
+        tableview.reloadData()
+    }
+}
 

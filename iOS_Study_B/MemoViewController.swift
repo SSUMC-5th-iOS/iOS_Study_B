@@ -8,18 +8,37 @@
 import UIKit
 import SnapKit
 
+struct Memo : Identifiable {
+    var id: ObjectIdentifier?
+    var title: String?
+    var content: String?
+}
+
+
 class MemoViewController: UIViewController {
     
     let textfield: UITextField = {
-        let textfield = UITextField()
-        textfield.placeholder = "    메모 입력"
-        textfield.font = UIFont.systemFont(ofSize: 20)
-        textfield.keyboardType = .default
-        textfield.layer.cornerRadius = 5.0
-        textfield.layer.borderColor = UIColor.black.cgColor
-        textfield.layer.borderWidth = 1.0
+        let textField = UITextField()
+        textField.placeholder = "제목 입력"
+        textField.font = UIFont.systemFont(ofSize: 20)
+        textField.keyboardType = .default
+        textField.layer.cornerRadius = 5.0
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.borderWidth = 1.0
         
-        return textfield
+        return textField
+    }()
+    
+    let textfield2: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "내용 입력"
+        textField.font = UIFont.systemFont(ofSize: 20)
+        textField.keyboardType = .default
+        textField.layer.cornerRadius = 5.0
+        textField.layer.borderColor = UIColor.black.cgColor
+        textField.layer.borderWidth = 1.0
+        
+        return textField
     }()
     
     // 초기 메모 내용을 설정하기 위한 변수
@@ -34,53 +53,45 @@ class MemoViewController: UIViewController {
         configureSubviews()
         makeConstraints()
         setNavigationBar()
-        
-        // 초기 메모 내용이 있다면 텍스트 필드에 설정
-        if let initialContent = initialMemoContent {
-            textfield.text = initialContent
-        }
+      
     }
     
     func configureSubviews() {
         view.addSubview(textfield)
+        view.addSubview(textfield2)
     }
     
     func makeConstraints() {
         textfield.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
             make.height.equalTo(40.0)
-            make.top.equalTo(view.safeAreaLayoutGuide).inset(10)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(18)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
+        }
+        
+        textfield2.snp.makeConstraints { make in
+            make.top.equalTo(textfield.snp.bottom).offset(20)
+            make.height.equalTo(40.0)
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
         }
     }
     
     func setNavigationBar() {
-        let setButton = UIBarButtonItem(title: "작성하기", style: .plain, target: self, action: #selector(setButtonTapped))
-        navigationItem.rightBarButtonItem = setButton
+        let addButton = UIBarButtonItem(title: "작성하기", style: .plain, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
     }
     
-    var didUpdateMemo: ((String) -> Void)?
-    
-    @objc func setButtonTapped() {
-        if let content = textfield.text, !content.isEmpty {
-            if let viewController = navigationController?.viewControllers.first(where: { $0 is ViewController }) as? ViewController {
-                if let index = memoIndex {
-                    //기존 메모 수정
-                    viewController.tasks[index] = content
-                } else {
-                    //새 메모 추가
-                    viewController.tasks.append(content)
+    @objc func addButtonTapped() {
+            guard let title = textfield.text, let content = textfield2.text else {
+                    return
                 }
-                viewController.tableview.reloadData()
-                navigationController?.popViewController(animated: true)
-            }
+                let newMemo = Memo(id: ObjectIdentifier(self), title: title, content: content)
+
+                if let viewController = navigationController?.viewControllers.first as? ViewController {
+                    viewController.addMemo(newMemo)
+                }
+
+            self.navigationController?.popViewController(animated: true)
         }
     }
-}
-    
-extension MemoViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        setButtonTapped()
-        
-        return true
-    }
-}

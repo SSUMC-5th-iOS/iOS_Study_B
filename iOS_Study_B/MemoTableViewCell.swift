@@ -11,12 +11,21 @@ import SnapKit
 class MemoTableViewCell : UITableViewCell {
     static let identifier = "MemoTableViewCell"
     
-    let label : UILabel = {
+    let titleLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 23)
+    
+        return label
+        }()
+        
+    let contentLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.numberOfLines = 1
         
         return label
-    }()
-    
+        
+        }()
  
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -33,15 +42,23 @@ class MemoTableViewCell : UITableViewCell {
     }
     
     func configureSubviews() {
-        contentView.addSubview(label)
-    
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(contentLabel)
     }
     
     func makeConstraints() {
-        label.snp.makeConstraints{ make in
-            make.centerY.equalTo(contentView)
-            make.leading.equalTo(contentView).inset(15)
+           titleLabel.snp.makeConstraints { make in
+               make.top.equalTo(contentView).inset(10)
+               make.leading.equalTo(contentView).inset(15)
+           }
+           contentLabel.snp.makeConstraints { make in
+               make.top.equalTo(titleLabel.snp.bottom).offset(10)
+               make.leading.equalTo(contentView).inset(15)
+           }
+       }
+    
+    func configure(with memo : Memo) {
+            titleLabel.text = memo.title
+            contentLabel.text = memo.content
         }
-        
     }
-}
