@@ -100,18 +100,9 @@ extension ViewController : UITableViewDataSource, UITableViewDelegate{
     }
 }
 
-
 extension ViewController: MemoEditDelegate {
     func didUpdateMemo(_ memo: Memo, atIndex index: Int) {
         memos[index] = memo
         tableview.reloadData()
     }
 }
-
-extension ViewController: MemoDetailDelegate {
-    func didUpdateDetailMemo(_ memo: Memo, atIndex index: Int) {
-        memos[index] = memo
-        tableview.reloadData()
-    }
-}
-

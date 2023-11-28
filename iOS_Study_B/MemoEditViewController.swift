@@ -9,7 +9,6 @@
 import UIKit
 import SnapKit
 
-
 class MemoEditViewController: UIViewController {
 
     var memo: Memo?
@@ -76,12 +75,10 @@ class MemoEditViewController: UIViewController {
     }
 
     @objc func setButtonTapped() {
-        guard let updatedMemo = createUpdatedMemo(),
-                  let delegate = delegate,
-                  let index = index else {
+        guard let updatedMemo = createUpdatedMemo() else {
                 return
             }
-        delegate.didUpdateMemo(updatedMemo, atIndex: index)
+        delegate?.didUpdateMemo(updatedMemo, atIndex: index!)
         self.navigationController?.popViewController(animated: true)
     }
     

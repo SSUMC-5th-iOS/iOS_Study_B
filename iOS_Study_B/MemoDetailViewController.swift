@@ -5,18 +5,13 @@
 //  Created by 임아영 on 11/17/23.
 //
 
-protocol MemoDetailDelegate: AnyObject {
-    func didUpdateDetailMemo(_ memo: Memo, atIndex index: Int)
-}
-
 protocol MemoEditDelegate: AnyObject {
  func didUpdateMemo(_ memo: Memo, atIndex: Int)
 }
 
 extension MemoDetailViewController: MemoEditDelegate {
- func didUpdateMemo(_ memo: Memo, atIndex: Int) {
-     displayMemo(memo)
- }
+    func didUpdateMemo(_ memo: Memo, atIndex: Int) {
+    }
 }
 
 
@@ -28,8 +23,6 @@ class MemoDetailViewController: UIViewController {
     var memo: Memo?
     var index: Int?
     weak var delegate: MemoEditDelegate?
-    weak var detailDelegate: MemoDetailDelegate?
-
     
     let Label1: UILabel = {
         let label = UILabel()
@@ -59,6 +52,14 @@ class MemoDetailViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if isMovingFromParent {
+            backButtonTapped()
+        }
+    }
+    
     func configureSubviews() {
         view.addSubview(Label1)
         view.addSubview(Label2)
@@ -68,8 +69,7 @@ class MemoDetailViewController: UIViewController {
     func makeConstraints() {
         Label1.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
-            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide.snp.leading).inset(20)
         }
         Label2.snp.makeConstraints { make in
             make.top.equalTo(Label1.snp.bottom).offset(20)
@@ -97,10 +97,10 @@ class MemoDetailViewController: UIViewController {
             return
         }
         
-        detailDelegate?.didUpdateDetailMemo(updatedMemo, atIndex: index!)
+        delegate?.didUpdateMemo(updatedMemo, atIndex: index!)
         self.navigationController?.popViewController(animated: true)
     }
-        
+
         func createUpdatedMemo() -> Memo? {
             guard let updatedTitle = Label1.text,
                   let updatedContent = Label2.text else {
@@ -115,5 +115,7 @@ class MemoDetailViewController: UIViewController {
             Label2.text = memo.content
         }
     }
+
+
 
 
