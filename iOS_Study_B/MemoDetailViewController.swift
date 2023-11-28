@@ -5,15 +5,6 @@
 //  Created by 임아영 on 11/17/23.
 //
 
-protocol MemoEditDelegate: AnyObject {
- func didUpdateMemo(_ memo: Memo, atIndex: Int)
-}
-
-extension MemoDetailViewController: MemoEditDelegate {
-    func didUpdateMemo(_ memo: Memo, atIndex: Int) {
-    }
-}
-
 
 import UIKit
 import SnapKit
@@ -69,8 +60,9 @@ class MemoDetailViewController: UIViewController {
     func makeConstraints() {
         Label1.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide.snp.leading).inset(20)
-        }
+            make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
+            }
         Label2.snp.makeConstraints { make in
             make.top.equalTo(Label1.snp.bottom).offset(20)
             make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
@@ -102,12 +94,12 @@ class MemoDetailViewController: UIViewController {
     }
 
         func createUpdatedMemo() -> Memo? {
-            guard let updatedTitle = Label1.text,
-                  let updatedContent = Label2.text else {
+            guard let updatedLabel1 = Label1.text,
+                  let updatedLabel2 = Label2.text else {
                 return nil
             }
             
-            return Memo(id: memo?.id, title: updatedTitle, content: updatedContent)
+            return Memo(id: memo?.id, title: updatedLabel1, content: updatedLabel2)
         }
         
         func displayMemo(_ memo: Memo) {
@@ -116,6 +108,12 @@ class MemoDetailViewController: UIViewController {
         }
     }
 
+protocol MemoEditDelegate: AnyObject {
+ func didUpdateMemo(_ memo: Memo, atIndex: Int)
+}
 
-
-
+extension MemoDetailViewController: MemoEditDelegate {
+    func didUpdateMemo(_ memo: Memo, atIndex: Int) {
+        displayMemo(memo)
+    }
+}

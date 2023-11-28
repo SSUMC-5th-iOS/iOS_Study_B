@@ -86,14 +86,15 @@ class MemoEditViewController: UIViewController {
         textfield.text = memo.title
         textfield2.text = memo.content
     }
-
+    
     func createUpdatedMemo() -> Memo? {
-        guard let updatedTitle = textfield.text,
-              let updatedContent = textfield2.text else {
+        guard let updatedLabel1 = textfield.text,
+              let updatedLabel2 = textfield2.text else {
             return nil
         }
-        
-        return Memo(id: memo?.id, title: updatedTitle, content: updatedContent)
+
+        return Memo(id: memo?.id, title: updatedLabel1, content: updatedLabel2)
     }
+    
 }
 
