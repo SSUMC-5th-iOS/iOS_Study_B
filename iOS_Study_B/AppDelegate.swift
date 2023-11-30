@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  iOS_Study_B
+//  Calculator
 //
-//  Created by 박지윤 on 2023/09/28.
+//  Created by 황채웅 on 2023/11/08.
 //
 
 import UIKit
