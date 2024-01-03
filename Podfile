@@ -8,4 +8,6 @@ target 'iOS_Study_B' do
   # Pods for iOS_Study_B
 pod 'Alamofire'
 pod 'Kingfisher', '~> 7.0'
+pod 'SnapKit', '~> 5.0.0'
+
 end

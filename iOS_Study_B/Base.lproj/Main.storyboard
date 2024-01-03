@@ -378,7 +378,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dBO-ho-ylV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2020.6106870229007" y="1371.8309859154931"/>
+            <point key="canvasLocation" x="2150" y="1372"/>
         </scene>
         <!--Home-->
         <scene sceneID="pxn-Fk-0NQ">
@@ -423,6 +423,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="ic_home_upload"/>
+                                        <connections>
+                                            <action selector="buttonGoAlbum:" destination="ili-iv-c9V" eventType="touchUpInside" id="HmY-hg-PXK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -457,7 +460,7 @@
                             <constraint firstItem="2Y8-yB-Jgk" firstAttribute="bottom" secondItem="n6C-1V-hRy" secondAttribute="bottom" id="xRJ-Fo-STU"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="qTU-T6-Mlb"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="qTU-T6-Mlb"/>
                     <connections>
                         <outlet property="tableView" destination="n6C-1V-hRy" id="QTD-Re-Ngu"/>
                     </connections>
@@ -474,9 +477,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="ili-iv-c9V" kind="relationship" relationship="viewControllers" id="M7M-gC-Tc9"/>
+                        <segue destination="ypA-ek-kp6" kind="relationship" relationship="viewControllers" id="cQh-ly-6Pf"/>
                         <segue destination="hsd-EV-LAI" kind="relationship" relationship="viewControllers" id="Z1q-08-YV4"/>
                     </connections>
                 </tabBarController>
@@ -502,11 +508,49 @@
             </objects>
             <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
         </scene>
+        <!--릴스-->
+        <scene sceneID="Oax-1x-IRU">
+            <objects>
+                <viewController storyboardIdentifier="ReelsVC" id="ypA-ek-kp6" customClass="ReelsViewController" customModule="iOS_Study_B" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ULI-z7-Oso">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xXn-0r-onn">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dRY-nI-y0n">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PRg-cj-sW4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xXn-0r-onn" firstAttribute="leading" secondItem="PRg-cj-sW4" secondAttribute="leading" id="2YL-Lh-bJX"/>
+                            <constraint firstItem="xXn-0r-onn" firstAttribute="top" secondItem="PRg-cj-sW4" secondAttribute="top" id="UGF-Go-3ZV"/>
+                            <constraint firstItem="PRg-cj-sW4" firstAttribute="bottom" secondItem="xXn-0r-onn" secondAttribute="bottom" id="uN6-18-U4g"/>
+                            <constraint firstItem="PRg-cj-sW4" firstAttribute="trailing" secondItem="xXn-0r-onn" secondAttribute="trailing" id="zsx-dg-Umd"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="릴스" id="Gvh-g9-uOD"/>
+                    <connections>
+                        <outlet property="collectionView" destination="xXn-0r-onn" id="yGm-ys-ILa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nua-Fk-uav" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="1372"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="geQ-Un-cJu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hsd-EV-LAI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="A75-d0-5J3"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="A75-d0-5J3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t99-WY-XHb">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -519,17 +563,19 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lp6-6U-zdR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1093.8931297709923" y="1371.8309859154931"/>
+            <point key="canvasLocation" x="1332" y="1372"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="f.square.fill" catalog="system" width="128" height="114"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="ic_catstagram_logo" width="476" height="96"/>
         <image name="ic_home_heart" width="512" height="512"/>
         <image name="ic_home_send" width="512" height="512"/>
         <image name="ic_home_upload" width="512" height="512"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
